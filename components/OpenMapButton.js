@@ -1,24 +1,24 @@
-import { StatusBar } from "expo-status-bar";
-import { Pressable, StyleSheet, Text, View } from "react-native";
-import { SafeAreaView } from "react-native";
-import { Image } from "react-native";
-import eatikanLogo from "./assets/eatikanLogo.png";
-import OpenMapButton from "./components/OpenMapButton";
-import OrderNowButton from "./components/OrderNowButton";
-export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Image style={styles.heroLogo} source={eatikanLogo} />
-      <OpenMapButton />
-      <Pressable style={styles.secondaryButton}>
-        <Text style={styles.darkText}>Menu</Text>
-      </Pressable>
-      <OrderNowButton />
-      <StatusBar style="auto" />
-    </SafeAreaView>
-  );
-}
+import React from "react";
+import { Pressable, Text, Linking, StyleSheet } from "react-native";
 
+const OpenMapButton = () => {
+  const mapUrl = "https://maps.app.goo.gl/94WmeEwUb2uHCXaE7";
+
+  const openMap = async () => {
+    const supported = await Linking.canOpenURL(mapUrl);
+    if (supported) {
+      await Linking.openURL(mapUrl);
+    } else {
+      alert("Can't open map.");
+    }
+  };
+
+  return (
+    <Pressable onPress={openMap} style={styles.secondaryButton}>
+      <Text style={styles.darkText}>Location</Text>
+    </Pressable>
+  );
+};
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -63,3 +63,4 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 });
+export default OpenMapButton;

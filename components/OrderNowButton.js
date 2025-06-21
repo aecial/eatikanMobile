@@ -1,24 +1,25 @@
-import { StatusBar } from "expo-status-bar";
-import { Pressable, StyleSheet, Text, View } from "react-native";
-import { SafeAreaView } from "react-native";
-import { Image } from "react-native";
-import eatikanLogo from "./assets/eatikanLogo.png";
-import OpenMapButton from "./components/OpenMapButton";
-import OrderNowButton from "./components/OrderNowButton";
-export default function App() {
-  return (
-    <SafeAreaView style={styles.container}>
-      <Image style={styles.heroLogo} source={eatikanLogo} />
-      <OpenMapButton />
-      <Pressable style={styles.secondaryButton}>
-        <Text style={styles.darkText}>Menu</Text>
-      </Pressable>
-      <OrderNowButton />
-      <StatusBar style="auto" />
-    </SafeAreaView>
-  );
-}
+import React from "react";
+import { Pressable, Text, Linking, StyleSheet } from "react-native";
 
+const OpenNowButton = () => {
+  const phoneNumber = "09338102774"; // Replace with your shop's number
+
+  const makeCall = async () => {
+    const url = `tel:${phoneNumber}`;
+    const supported = await Linking.canOpenURL(url);
+    if (supported) {
+      await Linking.openURL(url);
+    } else {
+      alert("Can't make a call.");
+    }
+  };
+
+  return (
+    <Pressable onPress={makeCall} style={styles.primaryButton}>
+      <Text style={styles.whiteText}>📞 Order Now</Text>
+    </Pressable>
+  );
+};
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -63,3 +64,4 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 });
+export default OpenNowButton;
