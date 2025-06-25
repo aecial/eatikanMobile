@@ -15,9 +15,6 @@ export default function App() {
         <Stack.Screen
           name="Menu"
           component={require("./screens/CategoriesScreen").default}
-          options={{
-            headerRight: () => <OrderNowButton />,
-          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,6 +1,6 @@
 import { SafeAreaView, Text, ScrollView, View } from "react-native";
 import ChoiceBox from "../components/ChoiceBox"; // Assuming ChoiceBox takes a title prop
-
+import OrderNowButton from "../components/OrderNowButton";
 const CategoriesScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
@@ -14,9 +14,11 @@ const CategoriesScreen = () => {
           <ChoiceBox style={styles.choiceBox} title="SEAFOODS" />
           <ChoiceBox style={styles.choiceBox} title="CHICKEN" />
           <ChoiceBox style={styles.choiceBox} title="VEGETABLE" />
+
           {/* Add more <ChoiceBox /> as needed */}
         </View>
       </ScrollView>
+      <OrderNowButton />
     </SafeAreaView>
   );
 };
