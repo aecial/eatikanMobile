@@ -1,21 +1,25 @@
-import { SafeAreaView, Text, ScrollView, View } from "react-native";
+import { SafeAreaView, Text, ScrollView, View, Pressable } from "react-native";
 import ChoiceBox from "../components/ChoiceBox"; // Assuming ChoiceBox takes a title prop
 import OrderNowButton from "../components/OrderNowButton";
-const CategoriesScreen = () => {
+import categories from "../data/categories.json";
+
+const CategoriesScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.darkText}>Categories</Text>
       <ScrollView>
         <View style={styles.choicesRow}>
-          <ChoiceBox style={styles.choiceBox} title="ITIK" />
-          <ChoiceBox style={styles.choiceBox} title="PORK" />
-          <ChoiceBox style={styles.choiceBox} title="SALMON" />
-          <ChoiceBox style={styles.choiceBox} title="BEEF" />
-          <ChoiceBox style={styles.choiceBox} title="SEAFOODS" />
-          <ChoiceBox style={styles.choiceBox} title="CHICKEN" />
-          <ChoiceBox style={styles.choiceBox} title="VEGETABLE" />
-
-          {/* Add more <ChoiceBox /> as needed */}
+          {categories.map((cat) => (
+            <Pressable
+              key={cat.id}
+              style={styles.choiceBox}
+              onPress={() =>
+                navigation.navigate("Items", { category: cat.name })
+              }
+            >
+              <ChoiceBox title={cat.name} />
+            </Pressable>
+          ))}
         </View>
       </ScrollView>
       <OrderNowButton />

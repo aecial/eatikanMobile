@@ -16,6 +16,13 @@ export default function App() {
           name="Menu"
           component={require("./screens/CategoriesScreen").default}
         />
+        <Stack.Screen
+          name="Items"
+          component={require("./screens/ItemsScreen").default}
+          options={({ route }) => ({
+            title: `${route.params.category}`,
+          })}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

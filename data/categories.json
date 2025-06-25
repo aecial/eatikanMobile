@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "ITIK"
+  },
+  {
+    "id": 2,
+    "name": "PORK"
+  },
+  {
+    "id": 3,
+    "name": "BEEF"
+  },
+  {
+    "id": 4,
+    "name": "SEAFOODS"
+  },
+  {
+    "id": 5,
+    "name": "CHICKEN"
+  },
+  {
+    "id": 6,
+    "name": "VEGETABLE"
+  }
+]
