@@ -1,10 +1,10 @@
 import { View, Text, Image } from "react-native";
 import eatikanLogo from "../assets/eatikanLogo.png";
-const ChoiceBox = ({ title, style }) => {
+const ChoiceBox = ({ title, style, noText }) => {
   return (
     <View style={[styles.box, style]}>
       <Image style={styles.choieImage} source={eatikanLogo} />
-      <Text>{title}</Text>
+      {!noText && <Text style={{ fontWeight: "bold" }}>{title}</Text>}
     </View>
   );
 };
