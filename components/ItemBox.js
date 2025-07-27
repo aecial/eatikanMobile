@@ -6,7 +6,7 @@ const ItemBox = ({ title, pax, price }) => {
     <View style={styles.container}>
       <ChoiceBox title={title} noText={true} />
       <Text style={styles.title}>{title}</Text>
-      <Text style={styles.text}>3-4pax</Text>
+      <Text style={styles.text}>{pax} pax</Text>
       <Text style={styles.price}>₱{price}</Text>
     </View>
   );

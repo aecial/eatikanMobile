@@ -1,47 +1,197 @@
 {
   "ITIK": [
-    { "id": 1, "name": "Fried Itik", "price": 285 },
-    { "id": 2, "name": "Spicy Adobo", "price": 370 },
-    { "id": 3, "name": "Sisig Itik", "price": 370 },
-    { "id": 4, "name": "Dinakdakan", "price": 370 },
-    { "id": 5, "name": "Itik Estofado", "price": 370 },
-    { "id": 6, "name": "Itiksilog", "price": 149 }
+    { "id": 1, "name": "Fried Itik", "price": 285, "pax": "3-4", "imgSrc": "" },
+    {
+      "id": 2,
+      "name": "Spicy Adobo",
+      "price": 370,
+      "pax": "3-4",
+      "imgSrc": ""
+    },
+    { "id": 3, "name": "Sisig Itik", "price": 370, "pax": "3-4", "imgSrc": "" },
+    { "id": 4, "name": "Dinakdakan", "price": 370, "pax": "3-4", "imgSrc": "" },
+    {
+      "id": 5,
+      "name": "Itik Estofado",
+      "price": 370,
+      "pax": "3-4",
+      "imgSrc": ""
+    },
+    { "id": 6, "name": "Itiksilog", "price": 149, "pax": "1", "imgSrc": "" }
   ],
   "PORK": [
-    { "id": 7, "name": "Crispy Ulo", "price": 700 },
-    { "id": 8, "name": "Crispy Pata", "price": 650 },
-    { "id": 9, "name": "Pork Sinigang", "price": 220 },
-    { "id": 10, "name": "Pork Sisig", "price": 199 },
-    { "id": 11, "name": "Pork Dinakdakan", "price": 199 },
-    { "id": 12, "name": "Chicharon Bulaklak", "price": 199 },
-    { "id": 13, "name": "Mongolian Pork", "price": 199 },
-    { "id": 14, "name": "Lechon Kawali", "price": 180 }
+    { "id": 7, "name": "Crispy Ulo", "price": 700, "pax": "3-4", "imgSrc": "" },
+    {
+      "id": 8,
+      "name": "Crispy Pata",
+      "price": 650,
+      "pax": "3-4",
+      "imgSrc": ""
+    },
+    {
+      "id": 9,
+      "name": "Pork Sinigang",
+      "price": 220,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 10,
+      "name": "Pork Sisig",
+      "price": 199,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 11,
+      "name": "Pork Dinakdakan",
+      "price": 199,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 12,
+      "name": "Chicharon Bulaklak",
+      "price": 199,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 13,
+      "name": "Mongolian Pork",
+      "price": 199,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 14,
+      "name": "Lechon Kawali",
+      "price": 180,
+      "pax": "2-3",
+      "imgSrc": ""
+    }
   ],
   "BEEF": [
-    { "id": 15, "name": "Beef Tapa", "price": 199 },
-    { "id": 16, "name": "Beef & Mushroom", "price": 199 },
-    { "id": 17, "name": "Beef Pigar-Pigar", "price": 199 },
-    { "id": 18, "name": "Beef Ampalaya", "price": 199 },
-    { "id": 19, "name": "Beef Sinigang", "price": 199 },
-    { "id": 20, "name": "Beef Papaitan", "price": 199 }
+    { "id": 15, "name": "Beef Tapa", "price": 199, "pax": "2-3", "imgSrc": "" },
+    {
+      "id": 16,
+      "name": "Beef & Mushroom",
+      "price": 199,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 17,
+      "name": "Beef Pigar-Pigar",
+      "price": 199,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 18,
+      "name": "Beef Ampalaya",
+      "price": 199,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 19,
+      "name": "Beef Sinigang",
+      "price": 199,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 20,
+      "name": "Beef Papaitan",
+      "price": 199,
+      "pax": "2-3",
+      "imgSrc": ""
+    }
   ],
   "SEAFOODS": [
-    { "id": 21, "name": "Seafoods Sinigang", "price": 279 },
-    { "id": 22, "name": "Mixed Seafoods", "price": 249 },
-    { "id": 23, "name": "Salmon Sinigang", "price": 220 },
-    { "id": 24, "name": "Shrimp Sinigang", "price": 199 },
-    { "id": 25, "name": "Crispy Hito", "price": 139 },
-    { "id": 26, "name": "Crispy Salmon Skin", "price": 120 }
+    {
+      "id": 21,
+      "name": "Seafoods Sinigang",
+      "price": 279,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 22,
+      "name": "Mixed Seafoods",
+      "price": 249,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 23,
+      "name": "Salmon Sinigang",
+      "price": 220,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 24,
+      "name": "Shrimp Sinigang",
+      "price": 199,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 25,
+      "name": "Crispy Hito",
+      "price": 139,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 26,
+      "name": "Crispy Salmon Skin",
+      "price": 120,
+      "pax": "2-3",
+      "imgSrc": ""
+    }
   ],
   "VEGETABLE": [
-    { "id": 27, "name": "Chopsuey", "price": 179 },
-    { "id": 28, "name": "Pinakbet", "price": 179 },
-    { "id": 29, "name": "Stir Fried Tofu", "price": 179 },
-    { "id": 30, "name": "Binagoongang Talong", "price": 169 }
+    { "id": 27, "name": "Chopsuey", "price": 179, "pax": "2-3", "imgSrc": "" },
+    { "id": 28, "name": "Pinakbet", "price": 179, "pax": "2-3", "imgSrc": "" },
+    {
+      "id": 29,
+      "name": "Stir Fried Tofu",
+      "price": 179,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 30,
+      "name": "Binagoongang Talong",
+      "price": 169,
+      "pax": "2-3",
+      "imgSrc": ""
+    }
   ],
   "CHICKEN": [
-    { "id": 31, "name": "Buffalo Wings", "price": 199 },
-    { "id": 32, "name": "Chicken Parmesan", "price": 199 },
-    { "id": 33, "name": "Salted Egg Chicken", "price": 199 }
+    {
+      "id": 31,
+      "name": "Buffalo Wings",
+      "price": 199,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 32,
+      "name": "Chicken Parmesan",
+      "price": 199,
+      "pax": "2-3",
+      "imgSrc": ""
+    },
+    {
+      "id": 33,
+      "name": "Salted Egg Chicken",
+      "price": 199,
+      "pax": "2-3",
+      "imgSrc": ""
+    }
   ]
 }

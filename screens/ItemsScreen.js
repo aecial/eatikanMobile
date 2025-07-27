@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, ScrollView } from "react-native";
+import { SafeAreaView, Text, ScrollView, View } from "react-native";
 import items from "../data/items.json"; // Assuming items.json contains your items data
 import ItemBox from "../components/ItemBox";
 import OrderNowButton from "../components/OrderNowButton"; // Assuming you have an OrderNowButton component
@@ -7,17 +7,24 @@ const ItemsScreen = ({ route }) => {
   const categoryItems = items[category] || [];
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView contentContainerStyle={styles.choicesRow}>
-        {categoryItems.map((item) => (
-          <ItemBox
-            key={item.id}
-            title={item.name}
-            pax={item.pax}
-            price={item.price}
-          />
-        ))}
-      </ScrollView>
-      <OrderNowButton />
+      <View style={{ flex: 1 }}>
+        <ScrollView
+          contentContainerStyle={[
+            styles.choicesRow,
+            { paddingBottom: 24, flexGrow: 1 },
+          ]} // Add paddingBottom and flexGrow
+        >
+          {categoryItems.map((item) => (
+            <ItemBox
+              key={item.id}
+              title={item.name}
+              pax={item.pax}
+              price={item.price}
+            />
+          ))}
+        </ScrollView>
+        <OrderNowButton />
+      </View>
     </SafeAreaView>
   );
 };
@@ -32,7 +39,7 @@ const styles = {
     paddingHorizontal: 4,
     gap: 16,
     // Add horizontal padding for edge spacing
-    marginBottom: 20, // Add bottom margin for spacing from the OrderNowButton
+    marginBottom: 24, // Add bottom margin for spacing from the OrderNowButton
   },
   container: {
     flex: 1,
