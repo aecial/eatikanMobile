@@ -7,7 +7,7 @@ const ItemsScreen = ({ route }) => {
   const categoryItems = items[category] || [];
   return (
     <SafeAreaView style={styles.container}>
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, paddingBottom: 20 }}>
         <ScrollView
           contentContainerStyle={[
             styles.choicesRow,

@@ -2,7 +2,7 @@ import React from "react";
 import { Pressable, Text, Linking, StyleSheet } from "react-native";
 
 const OpenNowButton = () => {
-  const phoneNumber = "09338102774"; // Replace with your shop's number
+  const phoneNumber = "+639338102774";
 
   const makeCall = async () => {
     const url = `tel:${phoneNumber}`;
@@ -46,22 +46,6 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     textAlign: "center",
     marginBottom: 10,
-  },
-  secondaryButton: {
-    fontSize: 24,
-    borderWidth: 1,
-    borderColor: "#2F2F2F",
-    color: "#2F2F2F",
-    padding: 10,
-    borderRadius: 5,
-    textAlign: "center",
-    marginBottom: 10,
-  },
-  heroLogo: {
-    width: 400,
-    height: 400,
-    alignSelf: "center",
-    marginBottom: 20,
   },
 });
 export default OpenNowButton;

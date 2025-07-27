@@ -18,7 +18,7 @@ const HomeScreen = ({ navigation }) => {
         <Text style={styles.darkText}>Menu</Text>
       </Pressable>
       <OrderNowButton />
-      <StatusBar style="auto" />
+      <StatusBar style="dark" />
     </SafeAreaView>
   );
 };

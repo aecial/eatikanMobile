@@ -33,6 +33,7 @@ const styles = {
     padding: 20,
     // alignItems: "center", // You might not want this if you want the content to stretch
     // justifyContent: "center", // You might not want this for scrollable content
+    paddingBottom: 42, // Add padding to the bottom for spacing
   },
   darkText: {
     color: "#2F2F2F",

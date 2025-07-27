@@ -1,6 +1,12 @@
 {
   "ITIK": [
-    { "id": 1, "name": "Fried Itik", "price": 285, "pax": "3-4", "imgSrc": "" },
+    {
+      "id": 1,
+      "name": "Fried Itik",
+      "price": 285,
+      "pax": "3-4",
+      "imgSrc": ""
+    },
     {
       "id": 2,
       "name": "Spicy Adobo",
