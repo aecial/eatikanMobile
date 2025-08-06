@@ -1,5 +1,9 @@
 [
   {
+    "id": 0,
+    "name": "ALL"
+  },
+  {
     "id": 1,
     "name": "ITIK"
   },

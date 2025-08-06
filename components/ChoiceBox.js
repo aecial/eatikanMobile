@@ -1,9 +1,13 @@
-import { View, Text, Image } from "react-native";
+import { View, Text } from "react-native";
+import { Image } from "expo-image";
 import eatikanLogo from "../assets/eatikanLogo.png";
-const ChoiceBox = ({ title, style, noText }) => {
+const ChoiceBox = ({ title, style, noText, image }) => {
   return (
     <View style={[styles.box, style]}>
-      <Image style={styles.choieImage} source={eatikanLogo} />
+      <Image
+        style={styles.choieImage}
+        source={image ? { uri: image } : eatikanLogo}
+      />
       {!noText && <Text style={{ fontWeight: "bold" }}>{title}</Text>}
     </View>
   );
@@ -11,7 +15,7 @@ const ChoiceBox = ({ title, style, noText }) => {
 
 const styles = {
   box: {
-    padding: 8,
+    padding: 2,
     borderWidth: 1,
     borderRadius: 10,
     borderColor: "#A2B29F",
@@ -19,15 +23,14 @@ const styles = {
     alignItems: "center",
     backgroundColor: "#FFF",
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
     elevation: 2,
   },
   choieImage: {
-    width: 72,
-    height: 72,
-    marginBottom: 4,
+    width: "100%",
+    height: 80,
+
+    contentFit: "cover",
+    borderRadius: 8, // Optional, for rounded corners
   },
 };
 export default ChoiceBox;

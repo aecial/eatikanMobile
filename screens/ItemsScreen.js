@@ -4,7 +4,13 @@ import ItemBox from "../components/ItemBox";
 import OrderNowButton from "../components/OrderNowButton"; // Assuming you have an OrderNowButton component
 const ItemsScreen = ({ route }) => {
   const { category } = route.params;
-  const categoryItems = items[category] || [];
+  let categoryItems = [];
+  if (category === "ALL") {
+    categoryItems = Object.values(items).flat(); // Flatten all items if "ALL" category is selected
+  } else {
+    categoryItems = items[category] || [];
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={{ flex: 1, paddingBottom: 20 }}>
@@ -16,6 +22,7 @@ const ItemsScreen = ({ route }) => {
         >
           {categoryItems.map((item) => (
             <ItemBox
+              image={item.imgSrc}
               key={item.id}
               title={item.name}
               pax={item.pax}

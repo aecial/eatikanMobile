@@ -1,10 +1,10 @@
 import { View, Text } from "react-native";
 import ChoiceBox from "./ChoiceBox";
 
-const ItemBox = ({ title, pax, price }) => {
+const ItemBox = ({ title, pax, price, image }) => {
   return (
     <View style={styles.container}>
-      <ChoiceBox title={title} noText={true} />
+      <ChoiceBox title={title} noText={true} image={image} />
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.text}>{pax} pax</Text>
       <Text style={styles.price}>₱{price}</Text>
