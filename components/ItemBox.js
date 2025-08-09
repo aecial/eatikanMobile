@@ -1,14 +1,24 @@
-import { View, Text } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import ChoiceBox from "./ChoiceBox";
-
-const ItemBox = ({ title, pax, price, image }) => {
+import OrderNowButton from "./OrderNowButton";
+const ItemBox = ({ title, pax, price, image, onPress, enlarged, noText }) => {
+  const Container = onPress ? Pressable : View;
   return (
-    <View style={styles.container}>
-      <ChoiceBox title={title} noText={true} image={image} />
+    <Container
+      onPress={onPress}
+      style={[styles.container, enlarged && styles.enlarged]}
+    >
+      <ChoiceBox
+        title={title}
+        noText={true}
+        image={image}
+        enlarged={enlarged}
+      />
       <Text style={styles.title}>{title}</Text>
       <Text style={styles.text}>{pax} pax</Text>
       <Text style={styles.price}>₱{price}</Text>
-    </View>
+      {onPress ? "" : <OrderNowButton />}
+    </Container>
   );
 };
 const styles = {
@@ -27,6 +37,12 @@ const styles = {
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5, // For Android shadow
+  },
+  enlarged: {
+    width: "100%",
+    minHeight: 350,
+    marginBottom: 0,
+    padding: 20,
   },
   title: {
     fontSize: 18,

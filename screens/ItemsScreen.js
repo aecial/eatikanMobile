@@ -1,4 +1,12 @@
-import { SafeAreaView, Text, ScrollView, View } from "react-native";
+import {
+  SafeAreaView,
+  Text,
+  ScrollView,
+  View,
+  Modal,
+  Pressable,
+} from "react-native";
+import { useState } from "react";
 import items from "../data/items.json"; // Assuming items.json contains your items data
 import ItemBox from "../components/ItemBox";
 import OrderNowButton from "../components/OrderNowButton"; // Assuming you have an OrderNowButton component
@@ -6,10 +14,13 @@ const ItemsScreen = ({ route }) => {
   const { category } = route.params;
   let categoryItems = [];
   if (category === "ALL") {
-    categoryItems = Object.values(items).flat(); // Flatten all items if "ALL" category is selected
+    categoryItems = Object.values(items).flat();
   } else {
     categoryItems = items[category] || [];
   }
+
+  // Modal state
+  const [selectedItem, setSelectedItem] = useState(null);
 
   return (
     <SafeAreaView style={styles.container}>
@@ -18,7 +29,7 @@ const ItemsScreen = ({ route }) => {
           contentContainerStyle={[
             styles.choicesRow,
             { paddingBottom: 24, flexGrow: 1 },
-          ]} // Add paddingBottom and flexGrow
+          ]}
         >
           {categoryItems.map((item) => (
             <ItemBox
@@ -27,11 +38,50 @@ const ItemsScreen = ({ route }) => {
               title={item.name}
               pax={item.pax}
               price={item.price}
+              onPress={() => setSelectedItem(item)}
             />
           ))}
         </ScrollView>
         <OrderNowButton />
       </View>
+      {/* Modal for enlarged item view */}
+      <Modal
+        visible={!!selectedItem}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setSelectedItem(null)}
+      >
+        <Pressable
+          style={{
+            flex: 1,
+            backgroundColor: "rgba(0,0,0,0.5)",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          onPress={() => setSelectedItem(null)}
+        >
+          {selectedItem && (
+            <View
+              style={{
+                width: "95%",
+                backgroundColor: "transparent",
+                borderRadius: 16,
+                padding: 24,
+                alignItems: "center",
+              }}
+            >
+              <ItemBox
+                image={selectedItem.imgSrc}
+                title={selectedItem.name}
+                pax={selectedItem.pax}
+                price={selectedItem.price}
+                enlarged
+                noText={false}
+              />
+            </View>
+          )}
+        </Pressable>
+      </Modal>
     </SafeAreaView>
   );
 };
