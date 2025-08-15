@@ -5,6 +5,7 @@ import {
   View,
   Modal,
   Pressable,
+  TextInput,
 } from "react-native";
 import { useState } from "react";
 import items from "../data/items.json"; // Assuming items.json contains your items data
@@ -12,9 +13,15 @@ import ItemBox from "../components/ItemBox";
 import OrderNowButton from "../components/OrderNowButton"; // Assuming you have an OrderNowButton component
 const ItemsScreen = ({ route }) => {
   const { category } = route.params;
+  const [searchQuery, setSearchQuery] = useState("");
   let categoryItems = [];
   if (category === "ALL") {
     categoryItems = Object.values(items).flat();
+    if (searchQuery) {
+      categoryItems = categoryItems.filter((item) =>
+        item.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
   } else {
     categoryItems = items[category] || [];
   }
@@ -25,6 +32,22 @@ const ItemsScreen = ({ route }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={{ flex: 1, paddingBottom: 20 }}>
+        {category === "ALL" ? (
+          <TextInput
+            placeholder="Search items..."
+            value={searchQuery}
+            onChangeText={setSearchQuery}
+            style={{
+              borderWidth: 1,
+              borderColor: "#ccc",
+              borderRadius: 8,
+              padding: 12,
+              marginBottom: 16,
+            }}
+          />
+        ) : (
+          ""
+        )}
         <ScrollView
           contentContainerStyle={[
             styles.choicesRow,
