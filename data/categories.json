@@ -5,26 +5,32 @@
   },
   {
     "id": 1,
-    "name": "ITIK"
+    "name": "ITIK",
+    "imgSrc": ""
   },
   {
     "id": 2,
-    "name": "PORK"
+    "name": "PORK",
+    "imgSrc": ""
   },
   {
     "id": 3,
-    "name": "BEEF"
+    "name": "BEEF",
+    "imgSrc": ""
   },
   {
     "id": 4,
-    "name": "SEAFOODS"
+    "name": "SEAFOODS",
+    "imgSrc": ""
   },
   {
     "id": 5,
-    "name": "CHICKEN"
+    "name": "CHICKEN",
+    "imgSrc": ""
   },
   {
     "id": 6,
-    "name": "VEGETABLE"
+    "name": "VEGETABLE",
+    "imgSrc": ""
   }
 ]

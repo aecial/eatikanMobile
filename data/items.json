@@ -5,7 +5,7 @@
       "name": "Fried Itik",
       "price": 285,
       "pax": "3-4",
-      "imgSrc": "https://res.cloudinary.com/deefzuorc/image/upload/v1754464534/lechonManok_jnketm.png"
+      "imgSrc": "https://res.cloudinary.com/deefzuorc/image/upload/v1755591627/FriedItik_okuaar.png"
     },
     {
       "id": 2,
@@ -14,7 +14,13 @@
       "pax": "3-4",
       "imgSrc": ""
     },
-    { "id": 3, "name": "Sisig Itik", "price": 370, "pax": "3-4", "imgSrc": "" },
+    {
+      "id": 3,
+      "name": "Sisig Itik",
+      "price": 370,
+      "pax": "3-4",
+      "imgSrc": "https://res.cloudinary.com/deefzuorc/image/upload/v1755591627/SisigItik_aj605w.png"
+    },
     { "id": 4, "name": "Dinakdakan", "price": 370, "pax": "3-4", "imgSrc": "" },
     {
       "id": 5,
@@ -23,7 +29,13 @@
       "pax": "3-4",
       "imgSrc": ""
     },
-    { "id": 6, "name": "Itiksilog", "price": 149, "pax": "1", "imgSrc": "" }
+    {
+      "id": 6,
+      "name": "Itiksilog",
+      "price": 149,
+      "pax": "1",
+      "imgSrc": "https://res.cloudinary.com/deefzuorc/image/upload/v1755591627/itikSilog_ixk8zp.png"
+    }
   ],
   "PORK": [
     { "id": 7, "name": "Crispy Ulo", "price": 700, "pax": "3-4", "imgSrc": "" },
